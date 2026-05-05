@@ -46,14 +46,15 @@ For educational purposes only. Usage of Hollow Ultra Pro for attacking targets w
 
 ## 📥 Deployment
 
-Developer:- HOLLOW                                  GitHub:- https://github.com/ishollowreal-coder
+Developer:- HOLLOW                                  
+g
 
 Execute the following commands for the full installation:
 
 ```bash
 pkg update && pkg upgrade -y
 pkg install python git -y
-git clone [https://github.com/ishollowreal-coder/hollow-ultra-pro](https://github.com/ishollowreal-coder/hollow-ultra-pro)
+git clone 
 cd hollow-ultra-pro
 pip install -r requirements.txt
 python main.py
