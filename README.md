@@ -14,6 +14,22 @@ Hollow Ultra Pro is not just a tool; it's a complete ecosystem. With **300+ tool
 * ⚡ **Optimized Execution:** Zero latency in tool selection.
 * 💎 **Encrypted UI:** Cyber-matrix styled interface with ASCII branding.
 * 📡 **Verified Sources:** Every tool is linked to its official, updated repository.
+---
+
+#🧬 Framework Modules
+Reconnaissance & OSINT
+Web Vulnerability Scanning
+Advanced Phishing & Social Engineering
+Wireless & Network Attacks
+Forensics & Steganography
+Android & Mobile Exploitation
+Post-Exploitation & Persistence
+...and 13 more modules.
+
+---
+
+#⚠️ Legal Disclaimer
+For educational purposes only. Usage of Hollow Ultra Pro for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws.
 
 ---
 
@@ -29,6 +45,8 @@ Hollow Ultra Pro is not just a tool; it's a complete ecosystem. With **300+ tool
 ---
 
 ## 📥 Deployment
+
+Developer:- HOLLOW                                  GitHub:- https://github.com/ishollowreal-coder
 
 Execute the following commands for the full installation:
 
