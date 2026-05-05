@@ -1,12 +1,39 @@
 import os
 import sys
 import time
+import requests  # Zaroori hai dynamic key ke liye
 from colorama import Fore, Style, init
 
 init(autoreset=True)
 
+# 1. Sabse upar aapka Link daal diya hai
+KEY_URL = "https://gist.githubusercontent.com/ishollowreal-coder/e6a73b05edc5ef97f22a5c9f0b6bacd6/raw/4e9766dfd530bd5c7178f97a6a3dc8a144679f5e/keys.txt"
+
 def clear():
     os.system('clear')
+
+# 2. Yeh naya function hai jo key check karega
+def check_license():
+    clear()
+    logo()
+    print(f"{Fore.RED}[!] VERIFYING SYSTEM ACCESS...")
+    try:
+        response = requests.get(KEY_URL, timeout=10)
+        valid_keys = response.text.strip().split('\n')
+        
+        print(f"\n{Fore.CYAN}--- HOLLOW PRO AUTHENTICATION ---")
+        user_key = input(f"{Fore.YELLOW}Enter Pro License Key: {Fore.WHITE}")
+        
+        if user_key in valid_keys:
+            print(f"{Fore.GREEN}[+] Access Granted! Welcome Hollow.")
+            time.sleep(2)
+            return True
+        else:
+            print(f"{Fore.RED}[!] Invalid Key! Buy from: @YourTelegram")
+            sys.exit()
+    except Exception:
+        print(f"{Fore.RED}[!] Internet connection zaroori hai key check karne ke liye.")
+        sys.exit()
 
 def logo():
     banner = f"""
@@ -24,7 +51,7 @@ def logo():
     print(f"{Fore.GREEN}  [+] Status: Active | [+] Database: Optimized | [+] Error: 0")
     print(f"{Fore.CYAN}{'='*60}\n")
 
-# Yahan maine original links ke saath pura data structure fix kar diya hai
+# --- TOOLS DATABASE ---
 tools_db = {
     "01": {"name": "Information Gathering", "tools": [
         ("Nmap", "nmap/nmap"), ("Sherlock", "sherlock-project/sherlock"), ("RedHawk", "Tuhinshubhra/RED_HAWK"),
@@ -62,10 +89,9 @@ tools_db = {
     "10": {"name": "Post Exploitation", "tools": [
         ("Empire", "BC-SECURITY/Empire"), ("Vegile", "Gueovany/Vegile"), ("FatRat", "Screetsec/TheFatRat")
     ]},
-    # Logic will auto-populate more categories to reach the 20 mark visually
 }
 
-# Auto-generation for 11-20 categories so the user doesn't have to do anything
+# Auto-generation
 for i in range(11, 21):
     cat_id = str(i)
     if cat_id not in tools_db:
@@ -77,14 +103,9 @@ def install_tool(name, repo):
     print(f"{Fore.RED}[PRO EXECUTION]: {Fore.WHITE}Downloading {Fore.YELLOW}{name}")
     print(f"{Fore.CYAN}{'-'*60}")
     url = f"https://github.com/{repo}"
-    print(f"{Fore.GREEN}[*] Source: {url}")
-    
-    # Real command
     os.system(f"git clone {url}")
-    
-    print(f"\n{Fore.GREEN}[!] {name} has been cloned to your directory.")
-    print(f"{Fore.YELLOW}[i] Usage: cd {name.lower()} && ls")
-    input(f"\n{Fore.CYAN}Press Enter to return...")
+    print(f"\n{Fore.GREEN}[!] {name} cloned. Press Enter to return...")
+    input()
 
 def category_view(cat_id):
     while True:
@@ -92,14 +113,10 @@ def category_view(cat_id):
         logo()
         cat = tools_db[cat_id]
         print(f"{Fore.MAGENTA}>> MODULE: {cat['name']}")
-        print(f"{Fore.CYAN}{'-'*60}")
-        
         for i, (t_name, t_repo) in enumerate(cat['tools'], 1):
-            print(f"{Fore.WHITE}[{str(i).zfill(2)}] {t_name.ljust(20)} {Fore.BLUE}({t_repo})")
-        
-        print(f"\n{Fore.YELLOW}[B] Back to Dashboard")
-        choice = input(f"\n{Fore.CYAN}hollow@terminal~# {Fore.WHITE}")
-        
+            print(f"{Fore.WHITE}[{str(i).zfill(2)}] {t_name}")
+        print(f"\n{Fore.YELLOW}[B] Back")
+        choice = input(f"\n{Fore.CYAN}hollow@terminal~# ")
         if choice.lower() == 'b': break
         try:
             idx = int(choice) - 1
@@ -107,28 +124,27 @@ def category_view(cat_id):
                 install_tool(cat['tools'][idx][0], cat['tools'][idx][1])
         except: pass
 
+# --- MAIN FUNCTION (Updated with License Check) ---
 def main():
-    while True:
-        clear()
-        logo()
-        print(f"{Fore.YELLOW}SELECT CATEGORY (300+ TOOLS LOADED)")
-        print(f"{Fore.CYAN}{'-'*60}")
-        
-        keys = sorted(tools_db.keys())
-        for i in range(0, len(keys), 2):
-            k1 = keys[i]
-            k2 = keys[i+1] if i+1 < len(keys) else None
-            line = f"{Fore.CYAN}[{k1}] {Fore.WHITE}{tools_db[k1]['name'].ljust(22)}"
-            if k2:
-                line += f" {Fore.CYAN}[{k2}] {Fore.WHITE}{tools_db[k2]['name']}"
-            print(line)
-            
-        print(f"\n{Fore.RED}[00] SHUTDOWN SYSTEM")
-        choice = input(f"\n{Fore.CYAN}hollow@root~# {Fore.WHITE}")
-        
-        if choice == '00': break
-        if choice in tools_db: category_view(choice)
-        elif f"0{choice}" in tools_db: category_view(f"0{choice}")
+    if check_license(): # Tool khulne se pehle key mangega
+        while True:
+            clear()
+            logo()
+            print(f"{Fore.YELLOW}SELECT CATEGORY (300+ TOOLS LOADED)")
+            print(f"{Fore.CYAN}{'-'*60}")
+            keys = sorted(tools_db.keys())
+            for i in range(0, len(keys), 2):
+                k1 = keys[i]
+                k2 = keys[i+1] if i+1 < len(keys) else None
+                line = f"{Fore.CYAN}[{k1}] {Fore.WHITE}{tools_db[k1]['name'].ljust(22)}"
+                if k2: line += f" {Fore.CYAN}[{k2}] {Fore.WHITE}{tools_db[k2]['name']}"
+                print(line)
+                
+            print(f"\n{Fore.RED}[00] SHUTDOWN SYSTEM")
+            choice = input(f"\n{Fore.CYAN}hollow@root~# ")
+            if choice == '00': break
+            if choice in tools_db: category_view(choice)
+            elif f"0{choice}" in tools_db: category_view(f"0{choice}")
 
 if __name__ == "__main__":
     main()
