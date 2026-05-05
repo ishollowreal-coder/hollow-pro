@@ -57,4 +57,4 @@ pkg install python git -y
 git clone https://github.com/ishollowreal-coder/hollow-pro.git
 cd hollow-pro
 pip install -r requirements.txt
-python main.py
+python hollow-pro.py
