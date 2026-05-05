@@ -45,16 +45,16 @@ For educational purposes only. Usage of Hollow Ultra Pro for attacking targets w
 ---
 
 ## 📥 Deployment
-
 Developer:- HOLLOW                                  
-g
+---
 
+---
 Execute the following commands for the full installation:
 
 ```bash
 pkg update && pkg upgrade -y
 pkg install python git -y
-git clone 
-cd hollow-ultra-pro
+git clone https://github.com/ishollowreal-coder/hollow-pro.git
+cd hollow-pro
 pip install -r requirements.txt
 python main.py
