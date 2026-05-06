@@ -9,7 +9,37 @@ Hollow Ultra Pro is not just a tool; it's a complete ecosystem. With **300+ tool
 
 ---
 
+## 💹 SUBSCRIPTION & PRICING
 
+Hollow Pro Edition ko access karne ke liye niche diye gaye plans available hain. Payment ke baad apni unique key claim karein.
+
+### 💎 Subscription Plans
+| Plan Type | Validity | Price | Features |
+| :--- | :---: | :---: | :--- |
+| 🟢 **Weekly** | 7 Days | **₹19** | 300+ Tools & Pro UI |
+| 🔵 **Monthly** | 30 Days | **₹39** | Instant Updates & Support |
+| 👑 **Yearly** | 365 Days | **₹79** | **Best Value** + Full Arsenal |
+
+---
+
+### 📊 Feature Comparison
+| Feature | Basic (Free) | Standard | Ultra Pro (Paid) |
+| :--- | :---: | :---: | :---: |
+| **Tools Count** | 15 | 50+ | **300+ Full Power** |
+| **Key System** | ❌ No | ⚠️ Single Use | ✅ **Dynamic Auth** |
+| **UI Design** | Simple | Professional | **Hollow Custom Banner** |
+| **Support** | ❌ No | ⚠️ Community | ✅ **Priority Support** |
+| **Updates** | ❌ Never | ⚠️ Periodic | ✅ **Real-time / Instant** |
+| **Access** | Public | Limited | **Full Arsenal Access** |
+
+---
+
+### 💳 Payment Method
+* **Admin:** t.me/JakirOnLiveyt
+* **Payment:** UPI / QR Code (Contact Admin)
+
+> **Note:** Key milne ke baad `python hollow_pro.py` chalayein aur apni key enter karke tool activate karein.
+> 
 
 ---
 
@@ -34,17 +64,6 @@ Post-Exploitation & Persistence
 
 #⚠️ Legal Disclaimer
 For educational purposes only. Usage of Hollow Ultra Pro for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws.
-
----
-
-## 📊 Comparison Table
-
-| Feature | Basic | Standard | Ultra Pro |
-| :--- | :---: | :---: | :---: |
-| Tools Count | 15 | 50+ | **300+** |
-| UI Experience | Basic | Professional | **Ultra Pro (Banner)** |
-| Updates | Manual | Periodic | **Instant/Real-time** |
-| Access | Open | Limited | **Full Arsenal** |
 
 ---
 
