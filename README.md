@@ -5,7 +5,11 @@
 ![Tier](https://img.shields.io/badge/Tier-Ultra%20Pro-gold)
 ![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-blue)
 
-Hollow Ultra Pro is not just a tool; it's a complete ecosystem. With **300+ tools** and **20 advanced categories**, it provides everything from initial reconnaissance to deep exploitation.
+Hollow Ultra Pro is not just a tool; it's a complete ecosystem. With **300+ tools** and **20 advanced categories**, it provides everything from initial reconnaissance to deep exploitation. #PLEASE NOT THAT THIS TOOL IS PAID STARTING FROM JUST ₹19 TO MAX ₹79.
+
+---
+
+
 
 ---
 
